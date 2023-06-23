@@ -1,0 +1,141 @@
+// String:- 
+// String is a data type 
+// collection of elemenst that under ''
+// let a = 'sumesh';
+// console.log(typeof(a));
+// let b = '123';
+// console.log(typeof(b));
+// let c = 's';
+// console.log(typeof(c));
+// let c = "s";
+// console.log(typeof(c));
+// js string method:-
+// length:- 
+// let a = 'hi my name is sumesh';
+// console.log(a.length)
+// slice:- 
+// let a = 'hi my name is sumesh';
+// console.log(a.slice(0,4)); 4 is end 0 is start
+// let b = 'Hello world';
+// // let c = b.slice(start,end)
+// let c = b.slice(2,7);
+// console.log(c);
+// let d = 'sumesh';
+// console.log(d.slice(1,2));
+// let e = 'Sumesh';
+// console.log(e.slice(0,4));
+// let x = 'world';
+// console.log(x.slice(0,2));
+// replaceall: - 
+// let a  = "hi my name is sumesh";
+// let b = a.replace('sumesh','rahul');
+// console.log(b)
+// let a  = "hi my name is sumesh";
+// let b = a.replaceAll('name','rahul');
+// console.log(b)
+// lowercase and uppercase : - 
+// let a = 'sumesh';
+// let b = a.toUpperCase();
+// console.log(b);
+// let a = 'SUMESH';
+// let b = a.toLowerCase();
+// console.log(b);
+// let a = 'Hello i am from india';
+// // count total length;
+// // and convert in uppercase 
+// // slice india
+// console.log(a.length);
+// console.log(a.toUpperCase());
+// console.log(a.slice(16,21));
+// trim :- 
+// let a = '        hello     ';
+// console.log(a.trim());
+// charAt:- 
+// let a = 'sumesh';
+// let b = a.charAt(2);
+// console.log(b);
+// search:- 
+// let a = 'Hello i am from india';
+// let b = a.search('india');
+// console.log(b);
+// splice:- 
+// const a = ['sumesh','rahul','amit','yy','kk'];
+// console.log(a.splice(2,0,'kapil','deepak'));
+// const a = ['b','c','d','e'];
+// a.splice(1,0,'f');
+// console.log(a);
+// // the splice method used to add and remove data 
+// a.splice(index,item);
+// let a = "sumesh";
+// for(let i=a.length;i>=0;i--)
+// {
+//     console.log(a.charAt(i));
+// }
+// let a = ['HTML','CSS','JS','B'];
+// let b = a.splice(2,1,'java','node.js');
+// console.log(a);
+// bubble sort:- 
+// for(i->0 length of array)
+// {
+//     for(j->0 length-i-1)
+//     {
+//         if(a[j]>a[j+1])
+//         {
+//             swap()
+//         }
+//     }
+// }
+// function bubblesort(a)
+// {
+//     for(let i=0;i<a.length;i++) // outer loop
+//     {
+//         for(let j=0;j<(a.length-i-1);j++) //iner loop
+//         {
+//             if(a[j]>a[j+1])
+//             {
+//                 var temp = a[j];
+//                 a[j] = a[j+1];
+//                 a[j+1] = temp;
+//             }
+//         }
+//     }
+//     console.log(a);
+// }
+// var a = [2,3,1,4,5];
+function  selection(arr)
+{
+    let n= arr.length; // n is the length of array
+    for(let i=0;i<n;i++)
+    {
+        let min = i;
+        for(let j= i+1;j<n;j++)
+        {
+            if(a[j]<a[min])
+            {
+                min= j;
+            }
+        }
+        if(min!=i)
+        {
+            let tmp = a[i];
+            a[i] = a[min];
+            a[min] = tmp;
+        }
+    }
+    return a;
+}
+let a = [4,2,1,5,6];
+ selection(a);
+console.log(a);
+
+
+
+
+
+
+
+
+
+
+
+
