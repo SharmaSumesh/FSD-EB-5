@@ -1,0 +1,147 @@
+// Array Question:- 
+// const a = [1,2,3,4,5,6]
+//1 add all number presnt in array using for loop
+// let sum =0;
+// for(let i=0;i<a.length;i++)
+// {
+// sum = sum + a[i];
+// }
+// console.log(sum)
+// 2) find the max number and min number in Array
+// const a = [3,2,1,5,4];
+// a.sort();
+// console.log(a);
+// console.log(a[0])
+// console.log(a.length);
+// const a = [1,2,3];
+// Reverse the array :- 
+// const a = [3,2,1];
+// let new1 =[];
+// for(let i=a.length-1;i>=0;i--)
+// {
+//     new1.push(a[i]);
+// } 
+// console.log(new1);
+// Reverse in String 
+// let a = 'Hello world';
+// // out = > 'dlrow olleH' 
+// let s = '';
+// for(let i=a.length-1;i>=0;i--)
+// {
+// s = s+ a.charAt(i);
+// }
+// console.log(s);
+// console.log(typeof(s));
+// let a = [1,2,3];
+// let b = [4,5,6];
+// // merge the array 
+// let c= a.concat(b);
+// console.log(c);
+
+// find the occurence in array 2:- 
+// function occ(a,x)
+// {
+//     let count =0;
+//     for(let i=0;i<a.length;i++)
+//     {
+//         if(x==a[i])
+        
+//             count++;
+        
+        
+//     }
+//     return count;
+// }
+// let a = [1,2,2,2,3,4,5];
+
+// let x = 2;
+// console.log(occ(a,x));
+// let a = "Hello my name is This";
+// // let b = [1,2,3,4,5,6];
+// // find the index value of 2
+// let b= '';
+// for(let i=a.length-1;i>=0;i--)
+// {
+// b = b+ a.charAt(i);
+// }
+// console.log(b);
+// let a = [1,2,3,4,5,6];
+// let key =3;
+// // using the linear search key it return 1 otherwise -1
+// for(let i=0;i<a.length;i++)
+// {
+//     if(a[i]==key)
+//     {
+//         console.log(i);
+//     }
+//     else
+//     {
+
+//     }
+// }
+// let a = 'hello world';
+// console.log(a.toUpperCase());
+// const a = [1,2,3,4,5];
+// let sum = 5;
+// // 1,4=>5
+// // 2,3 =5
+// for(let i=0;i<a.length;i++)
+// {
+//     for(let j = i+1;j<a.length;j++)
+//     {
+//         if(a[i]+a[j]==sum)
+//         {
+//             console.log(i+" "+j);
+//         }
+//     }
+// }
+// let a = "AAABBCCD";
+// let b = "";
+// // // compress the string 
+// // // output => ABCD
+// let count=1;
+// for(let i=0;i<a.length;i++)
+// {
+//     for(let j = i+1;j<a.length;j++)
+//     {
+//         if(a[i]==a[j])
+//         {
+//             count++;
+
+//         }
+//         else
+//         {
+//             b+=a[i] +String(count);
+//             count=1;
+//         };
+//     }
+// }
+// console.log(b);
+// console.log(count);
+function compress(a)
+{
+    let b = ""
+    let Stringarray = a.split("");
+    for(let i=0;i<a.length;i++)
+    {
+        let count =1;
+        let letter = a[i];
+        while(i<Stringarray.length-1 && Stringarray[i]==Stringarray[i+1])
+        {
+            count++;
+            i++;
+        }
+        if(count===1)
+        {
+            b +=letter;
+        }
+        else
+        {
+            b =+letter+count
+        }
+    }
+    return b;
+}
+
+
+
