@@ -1,0 +1,84 @@
+class Queue // stack
+{
+    constructor()
+    {
+        this.items = {};
+        this.head = 0;
+        this.tail = 0;
+    }
+    enqueue(element)
+    {
+        this.items[this.tail] = element;
+        this.tail++;
+    }
+    dequeue()
+    {
+        let remove = this.items[this.head];
+        delete this.items[this.head];
+        this.head++;
+        return remove;
+
+    }
+    peek()
+    {
+        let peek1 = this.items[this.head];
+        return peek1;
+    }
+    size()
+    {
+        return this.tail = this.head;
+    }
+    emptycheck()
+    {
+        if(this.tail-this.head==0)
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
+    clear()
+    {
+        this.items = {};
+        this.head = 0;
+        this.tail = 0;
+    }
+}
+let q = new Queue();
+q.enqueue(1)
+q.enqueue(2)
+q.enqueue(3);
+console.log(q.items);
+console.log(q.dequeue());
+console.log(q.items);
+console.log(q.clear());
+console.log(q.items);
+Tree: - 
+Tree is a non linear hierarchical data structure that consists of node connect by edeges 
+Node: - 
+A node is an entity that contains a keu or value and pointer to its child 
+edeges:- 
+it is the link between the two nodes 
+Root:- 
+it is topmost node of the tree 
+Height of tree:- 
+the height of node is the number of edges from the node 
+to the deepest path from the node to leaf 
+depth of node:- 
+the depth of node is the number of edeges from the root to the node 
+type of tree:- 
+1)binary tree
+2)Binary search tree 
+3)AVL tree 
+4)B-tree
+inorder:-
+first,visted all the node in the left subtree
+then the root node 
+visted all the nodes in the right side 
+preorder:- 
+visted root node 
+visted all the node in the lft subtree 
+visted all the node in the right subtree 
+postorder 
